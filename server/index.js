@@ -12,10 +12,10 @@ app.use(cors());
 
 //ENDPOINTS
 
+app.get('/api/houses', controller.getHouses);
+app.post('/api/houses', controller.createHouse);
+app.delete('/api/houses/:id', controller.deleteHouse);
+app.put('/api/houses/:id', controller.updateHouse);
 
 
-
-
-
-
-app.listen(4000, () => console.log("Running in port 4000"));
+app.listen(4004, () => console.log("Running in port 4004"));
